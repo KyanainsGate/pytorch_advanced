@@ -1,0 +1,13 @@
+ipykernel>=6.9.0
+notebook>=6.4.8
+environment_kernels>=1.1.1
+attrdict>=2.0.1
+tensorboard>=2.8.0
+tensorboardX>=2.4.1
+# For cv
+sklearn
+pandas>=1.4.0
+# For nlp
+janome>=0.4.1
+gensim>=4.1.0
+spacy>=3.2.1

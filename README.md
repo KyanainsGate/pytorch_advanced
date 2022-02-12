@@ -1,3 +1,60 @@
+# pytorch_advanced_ampere
+
+- Unofficial update version of `つくりながら学ぶ! PyTorchによる発展ディープラーニング` for Ampere Architecture GPUs
+- オリジナルがUbuntu 16.04なので、最近のもの（WSL2）に追従
+
+## 環境構築
+
+- Anacondaの利用を推奨(`conda install`のほうが安定するケースが多いため)
+- また`torchvision`と`torchtext`がなかなか共存しない(2022 Feb.現在)
+    - 自動でinstallされる`torch`のversionが一致しないためと予想
+    - 仮想環境レベルで分けることを推奨。例えば、torchvision用にkernel`cv`を
+    ```bash
+    # 1. Create new virtual environment
+    conda create -n torch python=3.9
+    # 2. After Created vitual environment
+    conda install -c conda-forge torchvision # For CV chapter
+    # 3. Install pip packages for runnnig Jupyter
+    pip install ipykernel notebook environment_kernels
+    # 4. Create jupyter's kernel
+    ipython kernel install --user --name=cv --display-name=cv
+    ```
+
+    - torchtext用にはkernel`nlp`を作成
+    ```sh
+    # 1. Create new virtual environment
+    conda create -n torch python=3.9
+    # 2. After Created vitual environment
+    conda install -c pytorch torchtext # For NLP chapter
+    # 3. Install pip packages for runnnig Jupyter
+    pip install -r requreiments.txt
+    # 4. Create jupyter's kernel
+    ipython kernel install --user --name=nlp --display-name=nlp
+    ```
+
+    - Jupyter上で適切に選択（`起動 -> [Kernel] -> [Change Kernel] -> [cv] or [nlp]`）して使用
+
+- 最終的には以下の構成でテスト済み
+    - 共通
+        - OS: Ubuntu 20.04 @ WSL2 (Windows 11)
+        - CUDA: 11.1 (ただし [CUDA on Windows Subsystem for Linux (WSL)](https://developer.nvidia.com/cuda/wsl) )
+        - Python: 3.9.7
+    - 環境ごと
+
+      | Env. name | PyTorch Dependent Framework | PyTorch Ver.  | Chapter | 
+      | ------ | ------ | ------ | ------ | 
+      | `cv` | torchvision == `0.10.0a0` | 1.9.0 | Except 7 and 8 | 
+      | `nlp` | torchtext == `0.11.2` | 1.10.2 | 7 and 8 | 
+
+## 主なソース変更点
+
+- Ch.1: `ipywidgets`不調時のトラブルシューティングコメント挿入
+- Ch.5&6: 互換性対応(`sklearn`, `nn.BCEWithLogitsLoss()`の引数型対応)
+- Ch.7&8: Download Link更新、互換性対応(`MeCab`install方法, `torchtext`legacy化, `gensim`, ...)
+- Ch.9: kinetics dataset自動DL用のrequirements.txt追加
+
+# 以下公式のREADME
+
 ## つくりながら学ぶ! PyTorchによる発展ディープラーニング
 
 <div align="center">

@@ -4,3 +4,5 @@ weights/
 .ipynb_checkpoints
 *.pyc
 *.pth
+
+log_output.csv

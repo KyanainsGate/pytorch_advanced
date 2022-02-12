@@ -15,3 +15,6 @@ weights/
 *.pth
 .vector_cache/
 .data/
+
+jawiki.entity_vectors.300d.txt
+vector_neologd.zip:Zone.Identifier

@@ -8,3 +8,5 @@ tbX/
 .ipynb_checkpoints
 *.pyc
 *.pth
+
+*.Identifier
