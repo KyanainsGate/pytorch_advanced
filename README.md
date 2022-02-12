@@ -4,6 +4,10 @@
 - オリジナルがUbuntu 16.04なので、最近のもの（WSL2）に追従
 
 ## 環境構築
+- checkoutする
+    ```sh
+    git checkout main_20.04
+    ```
 
 - Anacondaの利用を推奨(`conda install`のほうが安定するケースが多いため)
 - また`torchvision`と`torchtext`がなかなか共存しない(2022 Feb.現在)
