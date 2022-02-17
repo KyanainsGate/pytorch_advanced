@@ -1,4 +1,4 @@
-# pytorch_advanced_ampere
+# pytorch_advanced
 
 - Unofficial update version of `つくりながら学ぶ! PyTorchによる発展ディープラーニング` for Ampere Architecture GPUs
 - オリジナルがUbuntu 16.04なので、最近のもの（WSL2）に追従
@@ -15,10 +15,10 @@
     - 仮想環境レベルで分けることを推奨。例えば、torchvision用にkernel`cv`を
     ```bash
     # 1. Create new virtual environment
-    conda create -n torch python=3.9
-    # 2. After Created vitual environment
+    conda create -n cv python=3.9
+    # 2. After Created virtual environment
     conda install -c conda-forge torchvision # For CV chapter
-    # 3. Install pip packages for runnnig Jupyter
+    # 3. Install pip packages for running Jupyter
     pip install ipykernel notebook environment_kernels
     # 4. Create jupyter's kernel
     ipython kernel install --user --name=cv --display-name=cv
@@ -27,10 +27,10 @@
     - torchtext用にはkernel`nlp`を作成
     ```sh
     # 1. Create new virtual environment
-    conda create -n torch python=3.9
-    # 2. After Created vitual environment
+    conda create -n nlp python=3.9
+    # 2. After Created virtual environment
     conda install -c pytorch torchtext # For NLP chapter
-    # 3. Install pip packages for runnnig Jupyter
+    # 3. Install pip packages for running Jupyter
     pip install -r requreiments.txt
     # 4. Create jupyter's kernel
     ipython kernel install --user --name=nlp --display-name=nlp
@@ -101,7 +101,6 @@ https://github.com/YutaroOgawa/pytorch_advanced/issues
 
 ### 3. 誤植について
 
-書籍中の誤植一覧はこちらになります。
-大変申し訳ございません。
+書籍中の誤植一覧はこちらになります。 大変申し訳ございません。
 
 [誤植一覧](https://github.com/YutaroOgawa/pytorch_advanced/issues?q=is%3Aissue+is%3Aopen+label%3A%E8%AA%A4%E6%A4%8D)
